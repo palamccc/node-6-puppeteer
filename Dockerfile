@@ -18,8 +18,5 @@ RUN apt-get update \
   && apt-get autoremove -y \
   && yarn global add puppeteer \
   && yarn cache clean \
-  && rm -Rf /tmp/* /var/lib/apt/lists/* \
-  && chmod -R +rx /usr/local/share/.config/yarn/global/node_modules/puppeteer
+  && rm -Rf /tmp/* /var/lib/apt/lists/*
 ENV NODE_PATH /usr/local/share/.config/yarn/global/node_modules
-RUN useradd -ms /bin/bash chrome
-USER chrome
