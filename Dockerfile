@@ -19,7 +19,7 @@ RUN apt-get update \
   && yarn global add puppeteer \
   && yarn cache clean \
   && rm -Rf /tmp/* /var/lib/apt/lists/* \
-  && chmod -R +r /usr/local/share/.config/yarn/global/node_modules/puppeteer
+  && chmod -R +rx /usr/local/share/.config/yarn/global/node_modules/puppeteer
 ENV NODE_PATH /usr/local/share/.config/yarn/global/node_modules
 RUN useradd -ms /bin/bash chrome
 USER chrome
